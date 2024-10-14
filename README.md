@@ -1,3 +1,3 @@
 ## Ejemplo React y Redux
 
-![Imgur](https://i.imgur.com/rl19wK0.png)
+![Imgur](https://imgur.com/a/Tz8rHW1.png)
