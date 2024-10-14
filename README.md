@@ -1,3 +1,3 @@
-## Ejemplo React y Redux
+## Notas (React-Redux)
 
-![Imgur](https://imgur.com/a/Tz8rHW1.png)
+![Texto alternativo](https://i.imgur.com/7rEV6Dd.png)
