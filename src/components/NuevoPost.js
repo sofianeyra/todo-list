@@ -15,7 +15,11 @@ class NuevoPost extends React.Component {
     handleSubmit = e => {
         e.preventDefault();
         if (this.state.titulo.trim() && this.state.body.trim()) {
-            console.log(this.state);
+            // Usamos el prop onAgregarNota para despachar la acción
+            this.props.onAgregarNota({
+                titulo: this.state.titulo,
+                body: this.state.body
+            });
             this.handleReset();
         }
     };
@@ -30,36 +34,38 @@ class NuevoPost extends React.Component {
     render() {
         return (
             <div className="container">
-            <form onSubmit={ this.handleSubmit }>
-            <div className="form-group">
-                <input
-                type="text"
-                placeholder="Titulo"
-                className="form-control"
-                name="titulo"
-                onChange={ this.handleInputChange }
-                value={ this.state.titulo }
-              />
+                <form onSubmit={this.handleSubmit}>
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            placeholder="Titulo"
+                            className="form-control"
+                            name="titulo"
+                            onChange={this.handleInputChange}
+                            value={this.state.titulo}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <textarea
+                            cols="19"
+                            rows="8"
+                            placeholder="Cuerpo"
+                            className="form-control"
+                            name="body"
+                            onChange={this.handleInputChange}
+                            value={this.state.body}>
+                        </textarea>
+                    </div>
+                    <div className="form-group">
+                        <button type="submit" className="btn btn-primary" style={{ marginRight: '10px' }}>
+                            Agregar Nota
+                        </button>
+                        <button type="button" className="btn btn-danger" onClick={this.handleReset}>
+                            Resetear
+                        </button>
+                    </div>
+                </form>
             </div>
-            <div className="form-group">
-              <textarea
-                cols="19"
-                rows="8"
-                placeholder="Cuerpo"
-                className="form-control"
-                name="body"
-                onChange={ this.handleInputChange }
-                value={ this.state.body }>
-              </textarea>
-            </div>
-            <div className="form-group">
-              <button type="submit" className="btn btn-primary" style={{marginRight: '10px'}}>Agregar Nota</button>
-              <button type="button" className="btn btn-danger" onClick={ this.handleReset }>
-                Resetear
-              </button>
-            </div>
-          </form>
-        </div>
         );
     }
 }
