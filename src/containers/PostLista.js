@@ -4,10 +4,8 @@ import Post from '../components/Post';
 import { borrarNota } from '../actions';
 
 function PostLista({ posts, onDelete }) {
-  console.log(posts, 'posts en PostLista');
   return (
     <div>
-      {console.log(posts, 'post')}
       {posts.map(post => {
         return (
           <Post post={ post } onDelete={ onDelete } key={ post.id } />

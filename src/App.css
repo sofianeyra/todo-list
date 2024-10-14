@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+html {
+  height: 100%;
+  background-color: #FF3CAC;
+  background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+
+body {
+  height: 90%;
+  background: transparent;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -29,4 +40,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.form-group {
+  padding: 10px 0px;
+}
+
+.form-group input, .form-group textarea {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-trash {
+  padding: 5px 8px;
+  display: flex;
+}
+
+.title, .form-group input, .form-group textarea {
+  color: white;
 }

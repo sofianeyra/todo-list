@@ -1,4 +1,5 @@
 import React from 'react';
+import TrashBin from '../trash-bin.png';
 
 const styles = {
   borderBottom: '2px solid #eee',
@@ -12,10 +13,10 @@ const styles = {
 const PostComponent = ({ post: { titulo, body, id }, onDelete }) => {
   return (
     <div style={styles}>
-      <h2>{titulo}</h2>
+      <h3>{titulo}</h3>
       <p>{body}</p>
-      <button className="btn btn-danger" type="button" onClick={() => onDelete(id)}>
-        Borrar
+      <button className="btn btn-danger btn-trash" type="button" onClick={() => onDelete(id)}>
+        <img width="15" src={TrashBin}/>
       </button>
     </div>
   );
